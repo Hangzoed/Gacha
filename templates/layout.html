@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Flask App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <h1 class="logo">Omar Happy things (Temp)</h1>
+        <strong><nav>
+          <ul class="menu">
+            <li><a href="{{ url_for('home') }}">Home</a></li>
+            
+            <li><a href="{{ url_for('HSR') }}">Honkai Star Rail</a></li>
+            <li><a href="{{ url_for('Genshin') }}">Genshin</a></li>
+            <li><a href="{{ url_for('League') }}">League of legends</a></li>
+            <li><a href="{{ url_for('Ark') }}">Arknights</a></li>
+            <li><a href="{{ url_for('FGO') }}">Fate Grand order</a></li>
+            <li><a href="{{ url_for('blue') }}">Blue Archive</a></li>
+          </ul>
+        </nav></strong>
+      </div>
+    </header>
+    <div class="container">
+      {% block content %}
+      {% endblock %}
+    </div>
+  </body>
+</html>
